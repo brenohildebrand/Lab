@@ -10,7 +10,7 @@ print('     [38;2;0;0;0m▄[38;2;0;0;0m[48;2;65;65;65m▀[0m[38;2;0;0;0m[4
 # s = b'\x20\x20\x20\x20\x20\x1b[38;2;0;0;0m\xe2\x96\x84'
 # print(s.decode('UTF-8'))
 
-print(b'     \x1b[38;2;0;0;0m\xe2\x96\x84\x1b[38;2;0;0;0m\x1b[48;2;65;65;65m\xe2\x96\x80\x1b[0m'.decode())
+print(b'     \x1b[38;2;0;0;0m\xe2\x96\x84\x1b[38;2;0;0;0m\x1b[48;2;65;65;65m\xe2\x96\x80\x1b[2J\x1b[0m'.decode())
 
 # def print_file(filepath: str) -> None:
 #     with open(filepath, "r") as f:
