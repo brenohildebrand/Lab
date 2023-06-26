@@ -1,21 +1,11 @@
-class Range
-    def by(step)
-        x = self.begin
-        if exclude_end?
-            while x < self.end
-                yield x
-                x += step
-            end
-        else
-            while x <= self.end
-                yield x
-                x += step
-            end
-        end
+class ListChanger
+    def change_list(list)
+        list.push(0)
     end
 end
 
-(0..10).by(2) { |x| print x }
-puts
-(0...10).by(2) { |x| print x }
-puts
+changer = ListChanger.new
+array = [1, 2, 3]
+
+changer.change_list(array)
+print array
