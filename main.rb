@@ -1,11 +1,21 @@
-module Sequences
-    def self.fromtoby(from, to, by)
-        x = from
-        while x <= to
-            yield x
-            x += by
+class Range
+    def by(step)
+        x = self.begin
+        if exclude_end?
+            while x < self.end
+                yield x
+                x += step
+            end
+        else
+            while x <= self.end
+                yield x
+                x += step
+            end
         end
     end
 end
 
-Sequences.fromtoby(1, 10, 2) {|x| puts x}
+(0..10).by(2) { |x| print x }
+puts
+(0...10).by(2) { |x| print x }
+puts
